@@ -13,8 +13,8 @@ const HeaderScoreScreen = (props) => {
           size={32}
           color={Colors.colorWhite}
         />
-      </TouchableOpacity>
-      <TouchableOpacity>
+      </TouchableOpacity >
+      <TouchableOpacity onPress={props.onPressNewGame} >
         <Text style={styles.text}>NOVO JOGO</Text>
       </TouchableOpacity>
     </View>

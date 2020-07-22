@@ -21,7 +21,8 @@ const AppNavigator = () => {
           activeTintColor: Colors.colorWhite,
           inactiveTintColor: Colors.colorGrey,
           style: styles.tabStyle,
-          tabStyle: {borderTopColor: 'transparent'}
+          tabStyle: {borderTopColor: 'transparent'},
+          keyboardHidesTabBar: true 
         }}
       >
         <TabNavigator.Screen

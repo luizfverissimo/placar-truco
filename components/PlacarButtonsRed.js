@@ -2,9 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Colors from "../constants/colors";
 
-const PlacarButtons = (props) => {
+const PlacarButtonsRed = (props) => {
   return (
-    <TouchableOpacity style={{width: '100%', alignItems: 'center'}} >
+    <TouchableOpacity style={{width: '100%', alignItems: 'center'}} onPress={props.onPress} >
       <View style={{ ...styles.buttonContainer, ...props.style }}>
         <Text style={styles.text}>{props.value}</Text>
       </View>
@@ -12,7 +12,7 @@ const PlacarButtons = (props) => {
   );
 };
 
-export default PlacarButtons;
+export default PlacarButtonsRed;
 
 const styles = StyleSheet.create({
   buttonContainer: {
