@@ -1,6 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { Modalize } from "react-native-modalize";
+import { useSelector, useDispatch } from "react-redux";
+import * as historyActions from "../store/history-actions";
+import moment from 'moment'
 
 import HeaderScoreScreen from "../components/HeaderScoreScreen";
 import Title from "../components/Title";
@@ -11,6 +14,8 @@ import ModalInput from "../components/ModalInput";
 import Colors from "../constants/colors";
 
 const ScoreScreen = (props) => {
+  const data = useSelector((state) => state.score);
+  const dispatch = useDispatch()
   const modalizeRef = useRef(null);
 
   const openModal = () => {
@@ -20,6 +25,22 @@ const ScoreScreen = (props) => {
   const closeModal = () => {
     modalizeRef.current?.close();
   };
+
+  useEffect(() => {
+    if (data.winner) {
+      const dataRaw = new Date()
+      const dataFormat = moment(dataRaw).format('DD-MM-YYYY - HH:mm')
+
+      const scoreRedTeam = data.score[data.score.length - 1].redTeam
+      const scoreBlueTeam = data.score[data.score.length - 1].blueTeam
+
+
+      dispatch(historyActions.addScore(data.nameRedTeam, data.nameBlueTeam, scoreRedTeam, scoreBlueTeam, data.winner, dataFormat ))
+    }
+    if(!data.winner) {
+      return
+    }
+  }, [data.winner]);
 
   return (
     <>

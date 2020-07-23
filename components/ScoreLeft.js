@@ -24,12 +24,40 @@ const ScoreLeft = (props) => {
 
   const scoreHandler = (value) => {
     if (data.score.length === 0 || data.winner) {
-      Alert.alert("", "Clique em novo jogo para iniciar.");
+      Alert.alert("", "Clique em NOVO JOGO para iniciar.");
       return;
     }
 
     dispatch(scoreAction.score(value, "redTeam"));
   };
+
+  const WinnerIcon = () => {
+    let icon
+    if (data.winner === "blueTeam"){
+      icon = (
+        <MaterialCommunityIcons
+          name="close-circle-outline"
+          size={52}
+          color={Colors.colorRed}
+        />
+      )
+    }
+    if (data.winner === "redTeam") {
+      icon = (
+        <MaterialCommunityIcons
+          name="crown"
+          size={52}
+          color={Colors.colorYellow}
+        />
+      )
+    }
+
+    if (!data.winner) {
+      icon = <View style={{height: 52}} ></View>
+    }
+
+    return icon
+  }
 
   return (
     <View style={styles.container}>
@@ -42,20 +70,7 @@ const ScoreLeft = (props) => {
         ref={flatlist}
         onContentSizeChange={() => flatlist.current.scrollToEnd()}
       />
-      {data.winner === "blueTeam" && (
-        <MaterialCommunityIcons
-          name="close-circle-outline"
-          size={52}
-          color={Colors.colorRed}
-        />
-      )}
-      {data.winner === "redTeam" && (
-        <MaterialCommunityIcons
-          name="crown"
-          size={52}
-          color={Colors.colorYellow}
-        />
-      )}
+      <WinnerIcon />
       <PlacarButtonsRed value="+1" onPress={() => scoreHandler(1)} />
       <PlacarButtonsRed value="+3" onPress={() => scoreHandler(3)} />
       <PlacarButtonsRed value="-1" onPress={() => scoreHandler(-1)} />

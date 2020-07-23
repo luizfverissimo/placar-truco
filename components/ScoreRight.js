@@ -30,6 +30,34 @@ const ScoreRight = (props) => {
     dispatch(scoreAction.score(value, "blueTeam"));
   };
 
+  const WinnerIcon = () => {
+    let icon
+    if (data.winner === "redTeam"){
+      icon = (
+        <MaterialCommunityIcons
+          name="close-circle-outline"
+          size={52}
+          color={Colors.colorRed}
+        />
+      )
+    }
+    if (data.winner === "blueTeam") {
+      icon = (
+        <MaterialCommunityIcons
+          name="crown"
+          size={52}
+          color={Colors.colorYellow}
+        />
+      )
+    }
+
+    if (!data.winner) {
+      icon = <View style={{height: 52}} ></View>
+    }
+
+    return icon
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{data.nameBlueTeam}</Text>
@@ -41,20 +69,7 @@ const ScoreRight = (props) => {
         ref={flatlist}
         onContentSizeChange={() => flatlist.current.scrollToEnd()}
       />
-      {data.winner === "redTeam" && (
-        <MaterialCommunityIcons
-          name="close-circle-outline"
-          size={52}
-          color={Colors.colorRed}
-        />
-      )}
-      {data.winner === "blueTeam" && (
-        <MaterialCommunityIcons
-          name="crown"
-          size={52}
-          color={Colors.colorYellow}
-        />
-      )}
+      <WinnerIcon />
       <PlacarButtonsBlue value="+1" onPress={() => scoreHandler(1)} />
       <PlacarButtonsBlue value="+3" onPress={() => scoreHandler(3)} />
       <PlacarButtonsBlue value="-1" onPress={() => scoreHandler(-1)} />
