@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: "openSans",
     fontSize: 18,
+    color: Colors.bgColor
   },
   inputContainer: {
     marginVertical: 20,

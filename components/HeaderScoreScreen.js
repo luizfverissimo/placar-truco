@@ -7,7 +7,7 @@ import Colors from '../constants/colors';
 const HeaderScoreScreen = (props) => {
   return (
     <View style={styles.headerContainer}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={props.onPressInfo} >
         <MaterialCommunityIcons
           name="information"
           size={32}

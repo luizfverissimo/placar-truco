@@ -17,12 +17,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.luizfverissimo.placartruco",
+      "buildNumber": "1.0.0",
+      "supportsTablet": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "android": {
+      "package": "com.luizfverissimo.placartruco",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon-placar-truco-transp.png",
         "backgroundColor": "#E41D1D"

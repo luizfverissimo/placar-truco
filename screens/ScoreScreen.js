@@ -10,6 +10,7 @@ import Title from "../components/Title";
 import ScoreLeft from "../components/ScoreLeft";
 import ScoreRight from "../components/ScoreRight";
 import ModalInput from "../components/ModalInput";
+import InfoModal from "../components/InfoModal";
 
 import Colors from "../constants/colors";
 
@@ -17,9 +18,14 @@ const ScoreScreen = (props) => {
   const data = useSelector((state) => state.score);
   const dispatch = useDispatch()
   const modalizeRef = useRef(null);
+  const modalizeInfoRef = useRef(null);
 
   const openModal = () => {
     modalizeRef.current?.open();
+  };
+
+  const openModalIndo = () => {
+    modalizeInfoRef.current?.open();
   };
 
   const closeModal = () => {
@@ -45,7 +51,7 @@ const ScoreScreen = (props) => {
   return (
     <>
       <View style={styles.screen}>
-        <HeaderScoreScreen onPressNewGame={openModal} />
+        <HeaderScoreScreen onPressNewGame={openModal} onPressInfo={openModalIndo}/>
         <Title title="PLACAR" />
         <View style={styles.placarContainer}>
           <ScoreLeft />
@@ -59,6 +65,9 @@ const ScoreScreen = (props) => {
             closeModal();
           }}
         />
+      </Modalize>
+      <Modalize ref={modalizeInfoRef} adjustToContentHeight={true}>
+        <InfoModal />
       </Modalize>
     </>
   );

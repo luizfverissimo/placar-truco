@@ -15,7 +15,7 @@ const HistoryScreen = (props) => {
   }, [dispatch, dataHistory])
 
   const deleteHandler = (id) => {
-    Alert.alert('', 'Você deseja excluir esse histório?', [
+    Alert.alert('', 'Você deseja excluir esse histórico?', [
       {
         text: "Não",
         style: "default",

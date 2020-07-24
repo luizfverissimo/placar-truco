@@ -71,14 +71,25 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end'
   },
   container: {
+    width: "100%",
     flexDirection: "row",
     justifyContent: "space-around",
+  },
+  teamRed: {
+    width: "50%",
+    justifyContent: 'center',
+    alignItems: "center",
   },
   textTeamRed: {
     fontFamily: "openSans",
     fontSize: 16,
     color: Colors.colorRed,
     textAlign: "center",
+  },
+  teamBlue: {
+    width: "50%",
+    justifyContent: 'center',
+    alignItems: "center",
   },
   textTeamBlue: {
     fontFamily: "openSans",
