@@ -44,7 +44,6 @@ export default (state = initialState, action) => {
         newWinner = 'blueTeam'
       }
 
-      console.log('winner:', newWinner)
       return {
         ...state,
         score: state.score.concat(newScore),
