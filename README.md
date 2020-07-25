@@ -1,4 +1,4 @@
-<img src="/assets/icon-placar-truco.png" alt="placar-truco-icon" style="width:50px;"/>
+<img src="/assets/icon-placar-truco.png" alt="placar-truco-icon" width:"50px"/>
 
 # Aplicativo Placar Truco :spades: :diamonds: :hearts: :clubs:
 Aplicativo para marcar pontos de uma partida de **TRUCO**, ao finalizar a partida o placar é salvo em um histórico. Aplicativo criado em **React-Native**.
