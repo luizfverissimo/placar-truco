@@ -3,7 +3,7 @@
 # Aplicativo Placar Truco :spades: :diamonds: :hearts: :clubs:
 Aplicativo para marcar pontos de uma partida de **TRUCO**, ao finalizar a partida o placar é salvo em um histórico. Aplicativo criado em **React-Native**.
 
-<img src="/images/gif1.gif" alt="animação placar truco" style="height:400px;"/> <img src="/images/1.png" alt="imagem-placar-truco-1" style="height:400px;"/> <img src="/images/2.png" alt="imagem-placar-truco-2" style="height:400px;"/> <img src="/images/3.png" alt="imagem-placar-truco-3" style="height:400px;"/> <img src="/images/4.png" alt="imagem-placar-truco-4" style="height:400px;"/>
+<img src="/images/gif1.gif" alt="animação placar truco" height="400"/> <img src="/images/1.png" alt="imagem-placar-truco-1" height="400"/> <img src="/images/2.png" alt="imagem-placar-truco-2" height="400"/> <img src="/images/3.png" alt="imagem-placar-truco-3" height="400"/> <img src="/images/4.png" alt="imagem-placar-truco-4" height="400"/>
 
 ## Conceito
 O truco é um jogo de cartas onde o objetivo é somar 12 pontos primeiro, para a marcação de pontos algumas pessoas utilizam marcadores feitos com esse propósito, de madeira ou plástico, outras cartas de baralho, grãos de feijão ou o que tiver a disposição. Com a ideia de facilitar a marcação de pontos foi criado este aplicativo, apesar da grande quantidade de aplicativos na Google Play Store com esse objetivo, este aplicativo foi criado com intúito de desenvolver uma versão própria com meu design.
