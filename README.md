@@ -1,3 +1,5 @@
+<img src="https://github.com/luizfverissimo/luizfverissimo/blob/master/lf_verissimo_logo_light.png?raw=true" alt="imagem-rpgdiscordbot-1" width="200"/>
+
 <img src="/assets/icon-placar-truco.png" alt="placar-truco-icon" width="50" />
 
 # Aplicativo Placar Truco :spades: :diamonds: :hearts: :clubs:
