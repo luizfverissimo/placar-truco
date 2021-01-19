@@ -1,4 +1,5 @@
 import React from "react";
+import * as StoreReview from 'expo-store-review';
 import { StyleSheet, Text, View, TouchableOpacity, Linking  } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
@@ -10,7 +11,7 @@ const InfoModal = (props) => {
       <Text style={styles.text}>Informações</Text>
       <TouchableOpacity style={styles.touchable} onPress={() => {}}>
         <Text style={styles.textButton}>AVALIE ESTE APP</Text>
-        <View style={styles.starsContainer}>
+        <View style={styles.starsContainer} onPress={StoreReview.requestReview}>
           <MaterialCommunityIcons
             name="star"
             size={18}
