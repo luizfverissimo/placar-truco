@@ -40,7 +40,7 @@ const InfoModal = (props) => {
         </View>
       </TouchableOpacity>
       <Text style={styles.text}>Versão</Text>
-      <Text style={styles.textSmall}>1.0.0</Text>
+      <Text style={styles.textSmall}>1.0.1</Text>
       <Text style={styles.text}>Autor</Text>
       <Text style={styles.textSmall}>luizfverissimo</Text>
       <TouchableOpacity onPress={() => Linking.openURL('https://github.com/luizfverissimo')} >
