@@ -30,7 +30,7 @@
       "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon-placar-truco-transp.png",
-        "backgroundColor": "#E41D1D"
+        "backgroundColor": "#292c34"
       }
     },
     "androidNavigationBar": {
