@@ -5,6 +5,8 @@
 # Aplicativo Placar Truco :spades: :diamonds: :hearts: :clubs:
 Aplicativo para marcar pontos de uma partida de **TRUCO**, ao finalizar a partida o placar é salvo em um histórico. Aplicativo criado em **React-Native**.
 
+## [CLICK HERE TO ACCESS PLAY STORE (pt-BR)](https://play.google.com/store/apps/details?id=com.luizfverissimo.placartruco)
+
 <img src="/images/gif1.gif" alt="animação placar truco" height="400"/> <img src="/images/1.png" alt="imagem-placar-truco-1" height="400"/> <img src="/images/2.png" alt="imagem-placar-truco-2" height="400"/> <img src="/images/3.png" alt="imagem-placar-truco-3" height="400"/> <img src="/images/4.png" alt="imagem-placar-truco-4" height="400"/>
 
 ## Conceito
